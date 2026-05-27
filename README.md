@@ -18,7 +18,7 @@ OpenCore EFI for HP S01-2020 desktop.
 - UHD630 graphics works
 - Audio layout: `alcid=11`
 - HDMI/display wake after display sleep works with `igfxonln=1`
-- USB mapped with `USBToolBox.kext` + `UTBMap.kext`; USB2 operation is verified
+- USB mapped with legacy `USBMap.kext`; all tested ports work at USB2 speed
 - CSR8510 A10 USB Bluetooth works with `BlueToolFixup.kext`
 - OpenCore picker uses `Builtin`, no OpenCanopy GUI
 - Debug boot arguments removed
@@ -36,13 +36,11 @@ If display wake is unstable on your monitor or HDMI port, keep `igfxonln=1` in `
 
 ## Bluetooth Notes
 
-The onboard Realtek Bluetooth device from the RTL8821CE card is disabled in the USB map. External CSR8510 A10 USB Bluetooth is verified working on Sonoma with `BlueToolFixup.kext`.
-
-The CSR8510 A10 adapter is mapped on `HS09` and marked as an internal USB port to improve Bluetooth device pairing and stability.
+External CSR8510 A10 USB Bluetooth is verified working on Sonoma with `BlueToolFixup.kext`.
 
 ## USB Notes
 
-The current stable EFI keeps `SSDT-USB-Reset.aml` enabled and uses `USBToolBox.kext` 1.1.1. On the tested HP S01 unit, front USB ports work reliably at USB2 speed under macOS. Front USB3 SuperSpeed behavior is not considered solved in this EFI.
+The current stable EFI keeps `SSDT-USB-Reset.aml` enabled and uses legacy `USBMap.kext`. On the tested HP S01 unit, all tested ports work reliably at USB2 speed under macOS. Front USB3 SuperSpeed behavior is not considered solved in this EFI.
 
 ## Important
 

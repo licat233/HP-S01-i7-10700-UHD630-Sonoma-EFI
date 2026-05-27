@@ -17,9 +17,21 @@ OpenCore EFI for HP S01-2020 desktop.
 - Boots macOS Sonoma
 - UHD630 graphics works
 - Audio layout: `alcid=11`
+- HDMI/display wake after display sleep works with `igfxonln=1`
 - USB mapped with `USBToolBox.kext` + `UTBMap.kext`
 - OpenCore picker uses `Builtin`, no OpenCanopy GUI
 - Debug boot arguments removed
+- Current boot args: `alcid=11 darkwake=0 igfxonln=1`
+
+## Power Notes
+
+For daily use on this desktop, system sleep is intentionally disabled and display sleep can be used instead. The tested macOS power baseline is:
+
+```bash
+sudo pmset -a sleep 0 disksleep 0 hibernatemode 0 standby 0 powernap 0 proximitywake 0 ttyskeepawake 0
+```
+
+If display wake is unstable on your monitor or HDMI port, keep `igfxonln=1` in `boot-args`.
 
 ## Important
 

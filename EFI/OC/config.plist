@@ -569,11 +569,11 @@
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
-			<true/>
+			<false/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>5</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -665,7 +665,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>alcid=11</string>
+				<string>alcid=11 darkwake=0 igfxonln=1</string>
 				<key>csr-active-config</key>
 				<data>
 				AwoAAA==

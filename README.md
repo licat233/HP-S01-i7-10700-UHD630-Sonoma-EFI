@@ -38,6 +38,8 @@ If display wake is unstable on your monitor or HDMI port, keep `igfxonln=1` in `
 
 The onboard Realtek Bluetooth device from the RTL8821CE card is disabled in the USB map. External CSR8510 A10 USB Bluetooth is verified working on Sonoma with `BlueToolFixup.kext`.
 
+The CSR8510 A10 adapter is mapped on `HS09` and marked as an internal USB port to improve Bluetooth device pairing and stability.
+
 ## Important
 
 Before using this EFI, generate your own SMBIOS values and replace these fields in `EFI/OC/config.plist`:

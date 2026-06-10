@@ -475,6 +475,24 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>RestrictEvents.kext</string>
+				<key>Comment</key>
+				<string>CPU name display fix</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RestrictEvents</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array/>
@@ -593,7 +611,7 @@
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>5</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -670,8 +688,12 @@
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
+				<key>revcpu</key>
+				<integer>1</integer>
+				<key>revcpuname</key>
+				<string>Intel Core i7-10700</string>
 				<key>revpatch</key>
-				<string>sbvmm</string>
+				<string>sbvmm,cpuname</string>
 				<key>rtc-blacklist</key>
 				<data>
 				</data>
@@ -707,6 +729,8 @@
 			<array>
 				<string>rtc-blacklist</string>
 				<string>revpatch</string>
+				<string>revcpu</string>
+				<string>revcpuname</string>
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
@@ -761,11 +785,11 @@
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string>REPLACE_WITH_YOUR_MLB</string>
+			<string>C02211207QXPHC1CB</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
-			<integer>1537</integer>
+			<integer>3841</integer>
 			<key>ROM</key>
 			<data>
 			AAAAAAAA
@@ -777,9 +801,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,1</string>
 			<key>SystemSerialNumber</key>
-			<string>4CE1291NSZ233</string>
+			<string>C02HFWZKPN5T</string>
 			<key>SystemUUID</key>
-			<string>18D56B67-6F63-7A44-4343-C295A06BEEA9</string>
+			<string>DA27F634-36A4-46B6-9FD0-8507F0D569A5</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
